@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run",
     "delete:reports": "rm -r cypress/results/* || true",
     "prereport": "npm run delete:reports",
     "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
@@ -16,8 +14,8 @@
     "cy:open_test": "npx cypress open --env username=cyTesttest@mailinator.com,password=cyTest1234",
     "cy:open_process": "npx cypress open --env username=$DB_USERNAME,password=$PASSWORD",
     "cypress:run": "npm run prereport && npx cypress run",
-    "cypress:e2e": "npm run cy:run; npm run mochawesome:merge; npm run junit:merge",
-    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/firstTest.spec.js' --browser chrome --record --key 7787c3d1-db2a-4158-bb77-1ae0b36f924f"
+    "cy:run_spec": "npx cypress run --spec 'cypress/e2e/firstTest.spec.js' --headless --record --key 7787c3d1-db2a-4158-bb77-1ae0b36f924f",
+    "cy:run_browser": "npm run cy:run_spec -- --browser edge  --group edge --ci-build-id 1 && npm run cy:run_spec -- --browser chrome  --group chrome --ci-build-id 1"
   },
   "author": "",
   "license": "ISC",
