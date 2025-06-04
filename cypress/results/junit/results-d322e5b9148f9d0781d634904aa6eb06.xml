@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.473" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-06-04T15:31:21" tests="0" file="cypress\e2e\shadowDom.spec.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test Shadow DOM" timestamp="2025-06-04T15:31:21" tests="1" time="3.465" failures="0">
+    <testcase name="Test Shadow DOM Verify Shadow DOM content" time="0.464" classname="Verify Shadow DOM content">
+    </testcase>
+  </testsuite>
+</testsuites>
